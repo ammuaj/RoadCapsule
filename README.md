@@ -21,8 +21,6 @@ torchvision       0.3.0
 ### Datasets
 
 ### Outputs
-<p align="justify">
-The predictions are saved in the `output/` directory. Each embedding has a header and a column with the graph identifiers. Finally, the predictions are sorted by the identifier column.</p>
 
 ### Options
 <p align="justify">
@@ -36,17 +34,16 @@ Training a RoadCaps model is handled by the `src/main.py` script which provides 
 ```
 #### Model options
 ```
-  --epochs                      INT     Number of epochs.                  Default is 100.
-  --batch-size                  INT     Number fo graphs per batch.        Default is 32.
-  --gcn-filters                 INT     Number of filters in GCNs.         Default is 20.
-  --gcn-layers                  INT     Number of GCNs chained together.   Default is 2.
-  --inner-attention-dimension   INT     Number of neurons in attention.    Default is 20.  
-  --capsule-dimensions          INT     Number of capsule neurons.         Default is 8.
-  --number-of-capsules          INT     Number of capsules in layer.       Default is 8.
-  --weight-decay                FLOAT   Weight decay of Adam.              Defatuls is 10^-6.
-  --lambd                       FLOAT   Regularization parameter.          Default is 0.5.
-  --theta                       FLOAT   Reconstruction loss weight.        Default is 0.1.
-  --learning-rate               FLOAT   Adam learning rate.                Default is 0.01.
+  --epochs                      INT     Number of epochs.                  
+  --batch-size                  INT     Number fo graphs per batch.        
+  --gcn-filters                 INT     Number of filters in GCNs.         
+  --gcn-layers                  INT     Number of GCNs chained together.  
+  --inner-attention-dimension   INT     Number of neurons in attention.     
+  --capsule-dimensions          INT     Number of capsule neurons.         
+  --number-of-capsules          INT     Number of capsules in layer.       
+  --weight-decay                FLOAT   Weight decay of Adam.              
+  --lambd                       FLOAT   Regularization parameter.          
+  --learning-rate               FLOAT   Adam learning rate.                
 ```
 ### Examples
 The following commands learn a model and save the predictions. Training a model on the default dataset:
